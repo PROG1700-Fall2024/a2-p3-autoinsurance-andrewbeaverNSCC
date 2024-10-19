@@ -5,16 +5,19 @@
 #Student Name:  Andrew Beaver
 
 def main():
-    # YOUR CODE STARTS HERE, each line must be indented (one tab)
-
+    #Display welcome message
     print("Auto Insurance Calculator")
 
+    #Ask user if they are male or female
     gender = input("\nAre you 'Male' or 'Female': ").lower()
 
+    #Ask user their age
     age = int(input("Enter your age: "))
 
+    #Ask user the price of their vehicle
     vehiclePrice = float(input("Enter the purchase price of the vehicle: "))
 
+    #Establish the insurance price based on male or female, then age, then vehicle price times rate divided by months (12)
     if gender == "male":
         if age >= 15 and age < 25:
             insPrice = (vehiclePrice * 0.25) / 12
@@ -30,8 +33,7 @@ def main():
         elif age >= 40 and age < 70:
             insPrice = (vehiclePrice * 0.1) / 12
 
+    #Display price
     print("\nYour monthly insurance will be ${0:.2f}".format(insPrice))
-
-    # YOUR CODE ENDS HERE
 
 main()
